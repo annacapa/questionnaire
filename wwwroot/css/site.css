@@ -1,0 +1,325 @@
+
+
+
+/*MY BOOTSTRAP OVERWRITES*/
+.btn {
+}
+
+.btn-default {
+}
+
+.btn-primary {
+    background: orange;
+    border: orange
+}
+
+    .btn-primary:hover {
+        background: orangered;
+        border: orangered
+    }
+
+.container-fluid {
+    padding: 0;
+    margin: 0
+}
+
+
+/*  Global Styles  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body, html {
+    font: normal 16px sans-serif;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    height: 100%
+}
+
+
+
+ul,
+nav {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    opacity: 0.75;
+    color: #fff
+}
+
+    a:hover {
+        opacity: 1;
+        cursor: default;
+        text-decoration: none;
+        color: orange
+    }
+
+    a.btn {
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        background-color: orangered;
+        opacity: 1
+    }
+
+        a.btn:hover {
+            color: pink
+        }
+
+
+/*  Sitewide Styles  */
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0
+}
+
+    section h3.title {
+        text-transform: capitalize;
+        font: 300 36px 'Lato', sans-serif;
+        margin-bottom: 20px;
+        text-align: center
+    }
+
+    section p {
+        max-width: 775px;
+        line-height: 2;
+        padding: 0 20px;
+        margin-bottom: 30px;
+        text-align: center
+    }
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px
+    }
+}
+
+/*   Header Styles   */
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    color: #444;
+    z-index: 100;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    background: rgb(255, 255, 255, 0.40)
+}
+
+    header.scrolled {
+        background: rgb(230, 230, 230); /* IE */
+        background: rgba(255, 255, 255, 0.70) /* NON-IE */
+    }
+
+
+@keyframes fadein {
+    100% {
+        opacity: 1
+    }
+}
+
+header h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300
+}
+
+header nav {
+    display: flex;
+    margin-right: -15px;
+    font-family: 'Lato', sans-serif
+}
+
+    header nav li {
+        margin: 0 15px
+    }
+
+        header nav li a, header h2 a {
+            color: #444
+        }
+
+            header nav li a:hover, header h2 a:hover {
+                color: #222;
+                opacity: 1;
+                text-decoration: none
+            }
+
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column
+    }
+
+        header h2 {
+            margin-bottom: 15px
+        }
+}
+
+/*  Page Styles  */
+
+body.homepage {
+    background: #fff555 url(/images/toa-heftiba-417510-unsplash-reduced.jpg) no-repeat center center;
+    max-width: 100%;
+}
+
+@media and screen (min-width: 768px) {
+    body.homepage {
+        background: #fff555 url(/images/toa-heftiba-417510-unsplash-reduced.jpg) no-repeat center center;
+        background-size: cover
+    }
+}
+
+
+
+/*   Hero Styles   */
+
+.hero {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    animation: 1s slidefade 1s forwards
+}
+
+    .hero h1 {
+        font: 100 40px 'Lato', sans-serif;
+        font-weight: 100
+    }
+
+    .hero h3 {
+        font: 300 21px 'Lato', sans-serif;
+        margin-bottom: 40px
+    }
+
+    .hero p {
+        display: block
+    }
+
+    .hero a.btn {
+        padding: 20px 46px
+    }
+
+.hero-content-area {
+    width: 60%;
+    margin-top: 10px
+}
+
+    .hero-content-area input, textarea {
+        background: rgba(245, 216, 235, 0.85);
+        border: rgba(245, 216, 235, 0.85);
+        color: #1a2426
+    }
+
+        .hero-content-area input, textarea:active {
+            background: rgba(245, 216, 235, 0.85);
+            border: rgba(245, 216, 235, 0.85);
+            color: #1a2426
+        }
+
+
+
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 600px
+    }
+
+        .hero h1 {
+            font-size: 24px
+        }
+
+        .hero h3 {
+            font-size: 21px
+        }
+
+        .hero a.btn {
+            padding: 15px 40px;
+            border: 1px orangered solid
+        }
+}
+
+
+
+
+/*   Form Styles   */
+
+.form-row {
+    padding-bottom: 15px
+}
+
+.hero form {
+    padding: 30px;
+    background: rgba(0, 51, 102, 0.30)
+}
+
+.form-check-label {
+    display: block
+}
+
+
+/*   Footer Styles   */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #666;
+    color: #fff;
+    padding: 1.25em 0 0.65em 0;
+}
+
+
+
+    footer p {
+        text-transform: uppercase;
+        font-size: 14px;
+        opacity: 0.6;
+        align-self: center; 
+        padding: 1.25em 0 0.65em 0;
+    }
+
+@media (max-width: 1100px) {
+    footer {
+        flex-direction: column
+    }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        footer ul li {
+            margin: 0 8px
+        }
+}

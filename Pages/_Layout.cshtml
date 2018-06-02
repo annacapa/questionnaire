@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>eGreeting Card - @ViewBag.meta_title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <meta name="keywords" value="@ViewBag.meta_keywords" />
+    <meta name="description" value="This is a website about sends cards to friends.  @ViewBag.meta_desc" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+    @RenderSection("css", required: false)
+</head>
+<body class="@ViewBag.theme">
+
+        <header>             <h2><a href="#">Tellme</a></h2>             <nav>                 <li><a href="#">How To</a></li>                 <li><a href="#">About</a></li>             </nav>                   </header>             @RenderBody()          <footer>             <p>Company Link</p>             <p>Hi, you are reading footer text.</p>
+            <p>Social media icons, really?</p>          </footer>         <!-- END: BODY HTML --> 
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+
+
+
+</body>
+</html>
