@@ -1,6 +1,106 @@
 ﻿@page
 @model PreviewModel
 @{
+    ViewBag.meta_title = "Forms";
+    ViewBag.meta_keywords = "";
+    ViewBag.meta_desc = "";
+    ViewBag.theme = "homepage";
 }
 
+<div class="container-fluid p-0">
 
+
+
+    <section class="hero ">
+
+        <h1 class="page-title">Preview</h1>
+
+
+
+        <div class="hero-content-area">
+
+            <form method="post">
+
+                <fieldset>
+
+                    <div class="form-row">
+                        <div class="col"><label asp-for="@Model._myQuestionnaire.Concert"></label></div>
+                        <div class="col"><input asp-for="@Model._myQuestionnaire.Concert" type="text" class="form-control" /></div>
+                        <div class="countdown"></div>
+                        <span asp-validation-for="@Model._myQuestionnaire.Concert" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="col"><label asp-for="@Model._myQuestionnaire.Costume"></label></div>
+                        <div class="col"><input asp-for="@Model._myQuestionnaire.Costume" type="text" class="form-control" /></div>
+                        <div class="countdown"></div>
+                        <span asp-validation-for="@Model._myQuestionnaire.Costume" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="col"><label asp-for="@Model._myQuestionnaire.Talent"></label></div>
+
+                        <div class="col"><input asp-for="@Model._myQuestionnaire.Talent" type="text" class="form-control" /></div>
+                        <div class="countdown"></div>
+                        <span asp-validation-for="@Model._myQuestionnaire.Talent" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="col"><label asp-for="@Model._myQuestionnaire.Job"></label></div>
+                        <div class="col"><input asp-for="@Model._myQuestionnaire.Job" type="text" class="form-control" maxlength="100"></div>
+                        <div class="countdown"></div>
+                        <span asp-validation-for="@Model._myQuestionnaire.Job" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="col"><label asp-for="@Model._myQuestionnaire.Visit"></label></div>
+                        <div class="col">
+                            <input type="hidden" asp-for="@Model._myQuestionnaire.Visit" value="karapp" />
+                            <label class="form-check-label">
+                                <input name="_myQuestionnaire.Visit_array" type="checkbox" value="south pacific"> The South Pacific
+                            </label>
+
+                            <label class="form-check-label">
+                                <input name="_myQuestionnaire.Visit_array" type="checkbox" value="iceland"> Iceland
+                            </label>
+                            <label class="form-check-label">
+                                <input name="_myQuestionnaire.Visit_array" type="checkbox" value="new york city"> New York City
+                            </label>
+                        </div>
+
+                        <span asp-validation-for="@Model._myQuestionnaire.Visit" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-row">
+                        <div class="col"></div>
+                        <div class="col"><div class="g-recaptcha" data-sitekey="6Le-Jy0UAAAAAMyxngpkD12DzzXto51KmZNciDG2"></div></div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col"></div>
+                        <div class="col"><input type="submit" value="Submit" class="btn btn-primary" /></div>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+@section scripts {
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<!-- BEGIN: TEXTAREA AUTOSIZE -->
+<script src="~/lib/textarea-autosize/dist/jquery.textarea_autosize.js"></script>
+<script>$('textarea').textareaAutoSize();</script>
+<!-- END: TEXTAREA AUTOSIZE -->
+
+<script src="~/lib/textarea-countdown.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+}
